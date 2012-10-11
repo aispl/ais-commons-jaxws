@@ -38,6 +38,13 @@
                 <role>Developer</role>
             </roles>
         </developer>
+        <developer>
+            <id>blazej</id>
+            <name>Blazej Majewski</name>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
     </developers>
 
     <build>

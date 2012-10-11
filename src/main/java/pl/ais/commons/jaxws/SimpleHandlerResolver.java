@@ -8,6 +8,8 @@ import javax.xml.ws.handler.PortInfo;
 
 /**
  * Provides injected list of handlers regardless of {@link PortInfo}.
+ *
+ * @author Tomasz Pik, AIS.PL
  */
 public class SimpleHandlerResolver implements HandlerResolver {
 

@@ -27,6 +27,8 @@ import org.w3c.dom.NodeList;
  *
  * Using <code>pl.ais.commons.jaxws.handlers.LoggingHandler</code> as logging category.
  * Provides ability to configure elements, that should have masked content.
+ *
+ * @author Blazej Majewski, AIS.PL
  */
 public class LoggingHandler implements SOAPHandler<SOAPMessageContext> {
 

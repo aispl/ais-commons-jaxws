@@ -3,6 +3,9 @@ ais-commons-jaxws
 
 Utility classes for JaxWS-based applications.
 
+LoggingHandler
+--------------
+
 Sample usage of LoggingHandler with Spring support for JaxWS:
 
     <bean id="handlerResolver" class="pl.ais.commons.jaxws.SimpleHandlerResolver">

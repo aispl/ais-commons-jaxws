@@ -2,8 +2,6 @@ package pl.ais.commons.jaxws.handlers;
 
 import java.util.Collections;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.xml.namespace.QName;
 import javax.xml.soap.SOAPElement;
@@ -15,13 +13,16 @@ import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 /**
  * Adding <code>http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd</code>
  * headers for outbound messages.
  */
 public class SecurityHandler implements SOAPHandler<SOAPMessageContext> {
 
-  private static final Logger log = Logger.getLogger(SecurityHandler.class.getName());
+  private final Log log = LogFactory.getLog(SecurityHandler.class.getName());
 
   private String username;
 
@@ -50,7 +51,7 @@ public class SecurityHandler implements SOAPHandler<SOAPMessageContext> {
       SOAPElement passwordElement = usernameToken.addChildElement("Password", PREFIX);
       passwordElement.addTextNode(password);
     } catch (SOAPException e) {
-      log.log(Level.WARNING, "exception during ws interaction", e);
+      log.warn("exception during adding security header", e);
     }
     return true;
   }

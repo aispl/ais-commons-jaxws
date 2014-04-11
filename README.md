@@ -30,7 +30,7 @@ Sample usage:
 
       <property name="handlerResolver" ref="handlerResolver" />
 
-      <!-- environment-specific entires -->
+      <!-- environment-specific entries -->
       <property name="endpointAddress" ref="name.of.bean.contains.url.of.endpoint" />
       <!-- optional, for HTTP Basic authentication
       <property name="username"        ref="name.of.bean.contains.basic.http.username" />
